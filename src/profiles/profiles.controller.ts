@@ -1,13 +1,13 @@
 /* eslint-disable prettier/prettier */
 import { Controller, Get } from '@nestjs/common';
-// import { ProfilesService } from './profiles.service';
+import { ProfilesService } from './profiles.service';
 
 @Controller('profiles')
 export class ProfilesController {
-    // constructor()
+    constructor(private profileService: ProfilesService){}
 
     @Get()
-    async getProfilesGithub(){
-        return 'get profiles'
+    async getProfilesGithub(): Object {
+        return this.profileService.getProfileUser();
     }
 }
