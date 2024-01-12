@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { ProfilesModule } from './profiles/profiles.module';
 import { databaseProviders } from './profiles/providers/database.providers';
 import { ConfigModule } from '@nestjs/config';
 import configuration from './config/configuration';
+import { ProfilesModule } from './profiles/profiles.module';
 
 @Module({
   imports: [
